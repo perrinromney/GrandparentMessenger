@@ -77,6 +77,7 @@ var kcRotateDial=function(elem, outputtext){
         rad+=maxRad/4;
         //transform opposite angle negative value, to possitive
         if(rad<0) rad+=maxRad;
+        outputtext.textContent = rad.toString();
         return rad;
     }
     function setDrag(e,bool){
@@ -168,7 +169,6 @@ var kcRotateDial=function(elem, outputtext){
 	delete dummy;
     
 	//Output
-    outputtext.textContent = output.rad.toString();
 	return output;
 }
 
