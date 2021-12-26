@@ -1,7 +1,7 @@
 // code from: http://kaisarcode.com/javascript-rotate-dial
 
 
-var kcRotateDial=function(elem){
+var kcRotateDial=function(elem, outputtext){
     var output={};
     //Preventing elem to being selected on IE
     if(document.all && !window.opera) elem.setAttribute("unselectable","on");
@@ -168,8 +168,10 @@ var kcRotateDial=function(elem){
 	delete dummy;
     
 	//Output
+    outputtext.textContent = output.rad.toString();
 	return output;
 }
 
 var elem=document.getElementById("spin-ball");
-var dial=kcRotateDial(elem);
+var outputtext=document.getElementById("outputtext")
+var dial=kcRotateDial(elem, outputtext);
