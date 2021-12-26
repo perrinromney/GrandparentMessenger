@@ -1,7 +1,7 @@
 // code from: http://kaisarcode.com/javascript-rotate-dial
 
 
-var kcRotateDial=function(elem){
+var kcRotateDial=function(elem, outputtext){
     var output={};
     //Preventing elem to being selected on IE
     if(document.all && !window.opera) elem.setAttribute("unselectable","on");
@@ -77,6 +77,7 @@ var kcRotateDial=function(elem){
         rad+=maxRad/4;
         //transform opposite angle negative value, to possitive
         if(rad<0) rad+=maxRad;
+        outputtext.textContent = rad.toString();
         return rad;
     }
     function setDrag(e,bool){
@@ -172,4 +173,5 @@ var kcRotateDial=function(elem){
 }
 
 var elem=document.getElementById("spin-ball");
-var dial=kcRotateDial(elem);
+var outputtext=document.getElementById("outputtext")
+var dial=kcRotateDial(elem, outputtext);

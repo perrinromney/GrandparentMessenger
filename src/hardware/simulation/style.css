@@ -83,14 +83,13 @@ img{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3,1fr);
-
+    background-color: lightcoral;
   }
   .listenbutton{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: lightcoral;
   }
 .recorddiv{
     grid-column-start: 4;
