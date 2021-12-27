@@ -1,11 +1,13 @@
+
+
 // common js syntax to import modules into node js
 const express = require('express');
-const connectDB = require('./config/db');
+//const connectDB = require('./config/db');
 
 const app = express();
 
 // connect the database
-connectDB();
+//connectDB();
 
 // Init middleware for accepting body data
 app.use(express.json({extended: false}));
@@ -18,9 +20,8 @@ app.get('/', (request, response) => response.json({msg: "Welcome to the contact 
 
 // Define routes
 app.use('/api/users', require('./routes/users'));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/contacts', require('./routes/contacts'));
-
+//app.use('/api/auth', require('./routes/auth'));
+//app.use('/api/contacts', require('./routes/contacts'));
 
 // listening port
 const PORT = process.env.PORT || 5000;
