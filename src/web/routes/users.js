@@ -11,7 +11,9 @@ const { check, validationResult } = require('express-validator');
 // @access  Public
 router.post('/', [], ()=>console.log('yes'));
 
-
+router.get('/', (request, response) => {
+    response.json({msg: "Users route"})
+});
 
 
 
